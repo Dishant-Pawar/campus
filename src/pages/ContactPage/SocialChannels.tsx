@@ -1,10 +1,11 @@
-﻿import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
+﻿import type { ReactNode } from 'react'
+import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
 import { SOCIAL_LINKS } from '../../constants/institute.constants'
 import { getAdmissionWhatsAppLink } from '../../data/social-media-links'
 
 const platformMeta: Record<
   string,
-  { handle: string; action: string; cssClass: string; icon: JSX.Element }
+  { handle: string; action: string; cssClass: string; icon: ReactNode }
 > = {
   facebook: {
     handle:   '@bbsinstitute',

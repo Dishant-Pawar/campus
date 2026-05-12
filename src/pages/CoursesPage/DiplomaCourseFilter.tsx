@@ -1,4 +1,5 @@
-﻿import type { FilterTab } from '../../utils/diploma-filter'
+﻿import type { ReactNode } from 'react'
+import type { FilterTab } from '../../utils/diploma-filter'
 import { DIPLOMA_CATEGORIES } from '../../constants/dept-categories.constants'
 
 interface DiplomaCourseFilterProps {
@@ -9,7 +10,7 @@ interface DiplomaCourseFilterProps {
 }
 
 /* Small inline icons per category */
-const categoryIcons: Record<string, JSX.Element> = {
+const categoryIcons: Record<string, ReactNode> = {
   'all': (
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />

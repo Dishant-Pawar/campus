@@ -1,4 +1,5 @@
-﻿import type { GalleryEventCategory } from '../../types/gallery.types'
+﻿import type { ReactNode } from 'react'
+import type { GalleryEventCategory } from '../../types/gallery.types'
 import { GALLERY_CATEGORIES } from '../../constants/dept-categories.constants'
 import { ALL_GALLERY_IMAGES } from '../../data/gallery-media'
 
@@ -9,7 +10,7 @@ interface GalleryEventFilterProps {
 }
 
 /* Per-category icons */
-const categoryIcons: Record<GalleryEventCategory, JSX.Element> = {
+const categoryIcons: Record<GalleryEventCategory, ReactNode> = {
   all: (
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />

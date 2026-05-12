@@ -1,6 +1,6 @@
 ﻿import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
 import FaqAccordionList from '../../components/accordion-elements/FaqAccordionList'
-import { faqItems, getFAQsByCategory } from '../../data/faq-content'
+import { getFAQsByCategory } from '../../data/faq-content'
 import useRevealOnScroll from '../../hooks/useRevealOnScroll'
 
 const AdmissionsFAQ = () => {

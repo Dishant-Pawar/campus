@@ -12,12 +12,13 @@ interface OutlineBtnProps {
   disabled?: boolean
   variant?: 'primary' | 'accent' | 'white'
   icon?: ReactNode
+  external?: boolean
   className?: string
 }
 
 const OutlineBtn = ({
   children, href, onClick, type = 'button', size = 'md',
-  fullWidth, disabled, variant = 'primary', icon, className = '',
+  fullWidth, disabled, variant = 'primary', icon, external, className = '',
 }: OutlineBtnProps) => {
   const variantClass = variant === 'accent' ? 'btn--outline-accent' : variant === 'white' ? 'btn--white' : 'btn--outline'
   const classes = ['btn', variantClass, size !== 'md' && `btn--${size}`, fullWidth && 'btn--full', className].filter(Boolean).join(' ')
@@ -29,7 +30,12 @@ const OutlineBtn = ({
     </>
   )
 
-  if (href) return <Link to={href} className={classes} onClick={onClick}>{content}</Link>
+  if (href) {
+    if (external) {
+      return <a href={href} className={classes} target="_blank" rel="noopener noreferrer" onClick={onClick}>{content}</a>
+    }
+    return <Link to={href} className={classes} onClick={onClick}>{content}</Link>
+  }
   return <button type={type} className={classes} onClick={onClick} disabled={disabled}>{content}</button>
 }
 

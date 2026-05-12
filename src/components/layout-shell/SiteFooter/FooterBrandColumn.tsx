@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom'
 import type { ReactElement } from 'react'
 import { getLogo } from '../../../utils/asset-path-resolver'
 import { INSTITUTE, SOCIAL_LINKS } from '../../../constants/institute.constants'
-import { ROUTES } from '../../../constants/route-paths.constants'
 
 // Social/brand icons are not available in lucide-react, kept as inline SVGs
 const SocialIcons: Record<string, ReactElement> = {

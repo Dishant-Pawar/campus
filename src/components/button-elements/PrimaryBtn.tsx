@@ -12,6 +12,7 @@ interface PrimaryBtnProps {
   fullWidth?: boolean
   disabled?: boolean
   loading?: boolean
+  variant?: 'primary' | 'accent' | 'white'
   icon?: ReactNode
   iconPosition?: 'left' | 'right'
   external?: boolean
@@ -20,11 +21,12 @@ interface PrimaryBtnProps {
 
 const PrimaryBtn = ({
   children, href, onClick, type = 'button', size = 'md',
-  fullWidth, disabled, loading, icon, iconPosition = 'left',
+  fullWidth, disabled, loading, variant = 'primary', icon, iconPosition = 'left',
   external, className = '',
 }: PrimaryBtnProps) => {
+  const variantClass = variant === 'accent' ? 'btn--accent' : variant === 'white' ? 'btn--white' : 'btn--primary'
   const classes = [
-    'btn', 'btn--primary',
+    'btn', variantClass,
     size !== 'md' && `btn--${size}`,
     fullWidth && 'btn--full',
     loading && 'btn--loading',

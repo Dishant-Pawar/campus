@@ -8,8 +8,6 @@
 import type { NoticeEntry } from '../types/announcement.types'
 import {
   siteAnnouncements,
-  getPinnedNotices,
-  getNewNotices,
 } from '../data/site-announcements'
 import { isExpired } from '../utils/date-formatter'
 

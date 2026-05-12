@@ -1,4 +1,5 @@
-﻿import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
+﻿import type { ReactNode } from 'react'
+import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
 import { scholarships } from '../../data/scholarship-info'
 import useRevealOnScroll from '../../hooks/useRevealOnScroll'
 
@@ -34,7 +35,7 @@ const ExternalLinkIcon = () => (
   </svg>
 )
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   government: <GovtIcon />,
   institute: <TrophyIcon />,
   external: <GlobalIcon />,

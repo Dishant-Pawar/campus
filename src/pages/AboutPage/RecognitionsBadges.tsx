@@ -1,5 +1,5 @@
 ﻿import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
-import { getLogo, getAboutImage } from '../../utils/asset-path-resolver'
+import { getAboutImage } from '../../utils/asset-path-resolver'
 
 interface Recognition {
   name:        string

@@ -1,4 +1,5 @@
-﻿import type { FacultyDepartment } from '../../types/faculty.types'
+﻿import type { ReactNode } from 'react'
+import type { FacultyDepartment } from '../../types/faculty.types'
 import { FACULTY_DEPARTMENTS } from '../../constants/dept-categories.constants'
 
 type FacultyFilter = 'all' | FacultyDepartment
@@ -9,7 +10,7 @@ interface FacultyDeptFilterProps {
 }
 
 /* Per-department icons */
-const iconMap: Record<FacultyFilter, JSX.Element> = {
+const iconMap: Record<FacultyFilter, ReactNode> = {
   all: (
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />

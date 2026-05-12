@@ -1,4 +1,4 @@
-﻿import { useRef } from 'react'
+﻿import type { ReactNode } from 'react'
 import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
 import useRevealOnScroll from '../../hooks/useRevealOnScroll'
 
@@ -7,7 +7,7 @@ interface Step {
   title: string
   desc: string
   tip: string
-  tipIcon: React.ReactNode
+  tipIcon: ReactNode
 }
 
 const LightbulbIcon = () => (

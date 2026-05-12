@@ -1,4 +1,5 @@
-﻿import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
+﻿import type { ReactNode } from 'react'
+import SectionTitleBlock from '../../components/section-blocks/SectionTitleBlock'
 import useRevealOnScroll from '../../hooks/useRevealOnScroll'
 import { getFeaturedAchievements } from '../../data/institute-achievements'
 
@@ -6,7 +7,7 @@ const TrophyIcon = () => <svg className="honor-card__icon" style={{ color: '#CA8
 const StarIcon   = () => <svg className="honor-card__icon" style={{ color: 'var(--color-primary)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
 const CheckIcon  = () => <svg className="honor-card__icon" style={{ color: 'var(--color-success)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   award: <TrophyIcon />, academic: <StarIcon />, placement: <CheckIcon />, ranking: <StarIcon />,
 }
 const wrapMap: Record<string, string> = {

@@ -1,5 +1,4 @@
 ﻿import PageBreadcrumb from '../../components/layout-shell/PageBreadcrumb'
-import { ALL_GALLERY_IMAGES } from '../../data/gallery-media'
 import { GALLERY_CATEGORIES } from '../../constants/dept-categories.constants'
 
 interface GalleryHeroBannerProps {

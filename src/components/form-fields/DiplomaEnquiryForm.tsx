@@ -19,7 +19,12 @@ const DiplomaEnquiryForm = ({ courseTitle }: DiplomaEnquiryFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const errors = validateDiplomaEnquiry(fields as Record<string, string>)
+    const validationFields: Record<string, string> = {
+      name: fields.name,
+      email: fields.email,
+      phone: fields.phone,
+    }
+    const errors = validateDiplomaEnquiry(validationFields)
     setValidationErrors(errors)
     if (errors.length > 0) return
     await submit('diploma', fields)
