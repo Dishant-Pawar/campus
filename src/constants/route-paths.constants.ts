@@ -9,6 +9,7 @@ export const ROUTES = {
   FACULTY: '/faculty',
   GALLERY: '/gallery',
   CONTACT: '/contact',
+  MPORTAL: '/mportal',
   NOTIFICATIONS: '/notifications',
   RESULTS: '/results',
   ALUMNI: '/alumni',

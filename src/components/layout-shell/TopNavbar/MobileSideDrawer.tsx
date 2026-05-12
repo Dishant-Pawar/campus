@@ -8,6 +8,7 @@ import {
   Users,
   Images,
   Mail,
+  LayoutGrid,
   Bell,
   X,
 } from 'lucide-react'
@@ -28,6 +29,8 @@ const navItems = [
   { label: 'Faculty',       path: ROUTES.FACULTY,       end: false, icon: <Users size={18} /> },
   { label: 'Gallery',       path: ROUTES.GALLERY,       end: false, icon: <Images size={18} /> },
   { label: 'Contact',       path: ROUTES.CONTACT,       end: false, icon: <Mail size={18} /> },
+  { label: 'MPortal',       path: 'https://mp-campus.vercel.app/', end: false, icon: <LayoutGrid size={18} />, external: true },
+  { label: 'CPortal',       path: 'https://campusflow-ashen.vercel.app/', end: false, icon: <LayoutGrid size={18} />, external: true },
   { label: 'Notifications', path: ROUTES.NOTIFICATIONS, end: false, icon: <Bell size={18} /> },
 ]
 
@@ -63,18 +66,32 @@ const MobileSideDrawer = ({ isOpen, onClose }: MobileSideDrawerProps) => {
 
         <nav className="mobile-drawer__nav" aria-label="Mobile navigation">
           {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              end={item.end}
-              className={({ isActive }) =>
-                `mobile-nav-link${isActive ? ' active' : ''}`
-              }
-              onClick={onClose}
-            >
-              <span className="mobile-nav-link__icon">{item.icon}</span>
-              {item.label}
-            </NavLink>
+            item.external ? (
+              <a
+                key={item.label}
+                href={item.path}
+                className="mobile-nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClose}
+              >
+                <span className="mobile-nav-link__icon">{item.icon}</span>
+                {item.label}
+              </a>
+            ) : (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                end={item.end}
+                className={({ isActive }) =>
+                  `mobile-nav-link${isActive ? ' active' : ''}`
+                }
+                onClick={onClose}
+              >
+                <span className="mobile-nav-link__icon">{item.icon}</span>
+                {item.label}
+              </NavLink>
+            )
           ))}
         </nav>
 

@@ -8,6 +8,7 @@ import {
   Users,
   Images,
   Mail,
+  LayoutGrid,
   ChevronDown,
 } from 'lucide-react'
 import { ROUTES } from '../../../constants/route-paths.constants'
@@ -100,6 +101,26 @@ const DesktopNavLinks = () => {
         <Mail size={16} />
         Contact
       </NavLink>
+
+      <a
+        href="https://mp-campus.vercel.app/"
+        className="nav-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LayoutGrid size={16} />
+        MPortal
+      </a>
+
+      <a
+        href="https://campusflow-ashen.vercel.app/"
+        className="nav-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LayoutGrid size={16} />
+        CPortal
+      </a>
     </>
   )
 }
